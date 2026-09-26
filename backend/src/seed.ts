@@ -101,30 +101,62 @@ export const seed = {
   "crew": [
     {
       "id": 1,
-      "name": "name 1",
+      "name": "抢修一班",
       "leader_id": 1,
-      "skill_tags": "skill tags 1",
-      "duty_status": "ASSIGNED",
+      "skill_tags": "高压,电缆,架空线",
+      "duty_status": "ON_DUTY",
       "current_ticket_id": 1,
       "contact_phone": "13800000001"
     },
     {
       "id": 2,
-      "name": "name 2",
+      "name": "抢修二班",
       "leader_id": 2,
-      "skill_tags": "skill tags 2",
-      "duty_status": "ARRIVED",
+      "skill_tags": "高压,变压器",
+      "duty_status": "ON_DUTY",
       "current_ticket_id": 2,
       "contact_phone": "13800000002"
     },
     {
       "id": 3,
-      "name": "name 3",
+      "name": "抢修三班",
       "leader_id": 3,
-      "skill_tags": "skill tags 3",
-      "duty_status": "WAIT_DISPATCH",
+      "skill_tags": "低压,电缆",
+      "duty_status": "OFF_DUTY",
       "current_ticket_id": 3,
       "contact_phone": "13800000003"
+    },
+    {
+      "id": 4,
+      "name": "抢修四班",
+      "leader_id": 4,
+      "skill_tags": "高压,电缆",
+      "duty_status": "ON_DUTY",
+      "current_ticket_id": 0,
+      "contact_phone": "13800000004"
+    },
+    {
+      "id": 5,
+      "name": "抢修五班",
+      "leader_id": 5,
+      "skill_tags": "低压,计量",
+      "duty_status": "ON_DUTY",
+      "current_ticket_id": 0,
+      "contact_phone": "13800000005"
+    }
+  ],
+  "arrivalRecord": [
+    {
+      "id": 1,
+      "ticket_id": 1,
+      "team_id": 1,
+      "arrived_at": "2026-06-11T09:30:00Z"
+    },
+    {
+      "id": 2,
+      "ticket_id": 2,
+      "team_id": 2,
+      "arrived_at": "2026-06-12T10:00:00Z"
     }
   ],
   "sparePartUsage": [
@@ -136,7 +168,7 @@ export const seed = {
       "quantity": 92,
       "warehouse_name": "warehouse name 1",
       "approved_by": "approved by 1",
-      "usage_status": "ASSIGNED"
+      "usage_status": "PENDING"
     },
     {
       "id": 2,
@@ -146,7 +178,7 @@ export const seed = {
       "quantity": 104,
       "warehouse_name": "warehouse name 2",
       "approved_by": "approved by 2",
-      "usage_status": "ARRIVED"
+      "usage_status": "APPROVED"
     },
     {
       "id": 3,
@@ -156,7 +188,7 @@ export const seed = {
       "quantity": 116,
       "warehouse_name": "warehouse name 3",
       "approved_by": "approved by 3",
-      "usage_status": "WAIT_DISPATCH"
+      "usage_status": "PENDING"
     }
   ]
 } as const;

@@ -1,0 +1,1 @@
+export interface ShiftHandover { id: number; from_team_id: number; to_team_id: number; operator_id: number; operator_name: string; ticket_ids: number[]; spare_part_usage_ids: number[]; arrival_record_ids: number[]; created_at: string }

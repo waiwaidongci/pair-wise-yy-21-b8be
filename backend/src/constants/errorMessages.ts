@@ -1,1 +1,1 @@
-export const ERROR_MESSAGES = { AUTH_REQUIRED: "missing bearer token", RBAC_DENIED: "role denied", VALIDATION_FAILED: "invalid payload", RATE_LIMITED: "too many requests" };
+export const ERROR_MESSAGES = { AUTH_REQUIRED: "missing bearer token", RBAC_DENIED: "role denied", VALIDATION_FAILED: "invalid payload", RATE_LIMITED: "too many requests", CREW_NOT_FOUND: "crew not found", HANDOVER_BLOCKED: "handover blocked by on-site tickets", HANDOVER_TARGET_INVALID: "target crew is not eligible for handover" };

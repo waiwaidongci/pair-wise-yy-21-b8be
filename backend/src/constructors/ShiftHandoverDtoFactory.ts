@@ -1,0 +1,1 @@
+export const createShiftHandoverDto = (overrides = {}) => ({ id: 0, from_team_id: 0, to_team_id: 0, operator_id: 0, operator_name: "", ticket_ids: [] as number[], spare_part_usage_ids: [] as number[], arrival_record_ids: [] as number[], created_at: new Date().toISOString(), ...overrides });
