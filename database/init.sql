@@ -53,6 +53,33 @@ CREATE TABLE IF NOT EXISTS spare_part_usage (
   usage_status TEXT
 );
 
+-- 到场记录：班组到达故障现场的签到/到场台账，换班时随班组值班责任移交
+CREATE TABLE IF NOT EXISTS arrival_record (
+  id INTEGER PRIMARY KEY,
+  crew_id TEXT,
+  ticket_id TEXT,
+  site_name TEXT,
+  arrived_at TEXT,
+  note TEXT,
+  status TEXT
+);
+
+-- 换班交接留痕：成功/失败均记录，保留前后班组与交接/接班人
+CREATE TABLE IF NOT EXISTS handover_record (
+  id INTEGER PRIMARY KEY,
+  from_crew_id TEXT,
+  to_crew_id TEXT,
+  handover_operator TEXT,
+  receiver_operator TEXT,
+  status TEXT,
+  ticket_ids TEXT,
+  part_ids TEXT,
+  arrival_ids TEXT,
+  block_reasons TEXT,
+  remark TEXT,
+  created_at TEXT
+);
+
 CREATE TABLE IF NOT EXISTS audit_log (
   id INTEGER PRIMARY KEY,
   actor TEXT,
